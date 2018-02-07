@@ -2,7 +2,7 @@ import pandas as pd
 
 
 def extract_used_technologies():
-    """Respondent id extractor
+    """Used technologies extractor
     Extract the used technologies from the raw dataset
     and stores them in a new csv file.
     """
