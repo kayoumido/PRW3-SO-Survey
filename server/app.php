@@ -5,7 +5,7 @@
 header("Content-type: application/json");
 
 
-$pathtofiles     = "data/processed/";
+$pathtofiles     = "../data/processed/";
 $usedtechsfile   = "extracted_used_technologies.csv";
 $wantedtechsfile = "extracted_wanted_technologies.csv";
 
@@ -26,7 +26,7 @@ if (($fp = fopen("$pathtofiles$usedtechsfile", "r")) !== false) {
         foreach ($data as $key => $value) {
             // fetch the wanted data
             if ($key === 0) $index = $value;
-            if ($key === 1) $count = $value
+            if ($key === 1) $count = $value;
             // write in array only when we have all the data
             if (!empty($index) and !empty($count))
                 $finaldata[$index]["count"] = $count;
