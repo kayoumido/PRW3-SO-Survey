@@ -1,0 +1,19 @@
+ip: 192.168.10.12
+memory: 2048
+cpus: 1
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: /Users/dkayoumi/Developement/Projects/cpnv/PRW3-SO-Survey
+        to: /home/vagrant/code
+sites:
+    -
+        map: so.datalab.io
+        to: /home/vagrant/code
+databases:
+    - homestead
+name: prw3-so-survey
+hostname: prw3-so-survey
