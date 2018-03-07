@@ -8,11 +8,11 @@ export function createChart(data, config, divider) {
         // convert object into array of objects
         let d = [];
         for (var tech in data) {
-            data[tech] = {
+            let tmp = {
                 key: tech,
                 count: data[tech] 
             };
-            d.push(data[tech]);
+            d.push(tmp);
         }
         // sort new array
         d.sort((a, b) => {
