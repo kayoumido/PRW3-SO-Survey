@@ -5,7 +5,7 @@ var chart;
 var childChart;
 
 $.ajax({
-    url: "server/app.php",
+    url: "src/server/app.php",
     method: "GET",
     dataType: "json",
     cache: "false"

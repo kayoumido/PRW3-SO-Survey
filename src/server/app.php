@@ -5,7 +5,7 @@
 header("Content-type: application/json");
 
 
-$pathtofiles     = "../data/processed/";
+$pathtofiles     = "../../data/processed/";
 $usedtechsfile   = "extracted_used_technologies.csv";
 $wantedtechsfile = "extracted_wanted_technologies.csv";
 
