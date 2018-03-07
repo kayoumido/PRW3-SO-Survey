@@ -4,11 +4,9 @@ export var defaultconfig = {
     options: {
         tooltips: {
             callbacks: {
-                title: (tooltipItem, data) => {
-                    return data.datasets[tooltipItem[0].datasetIndex].label
-                },
-                label: () => {
-                    return null
+                label: (item, data) => {
+                    // reformat tooltip to show technologie name and count
+                    return `${data.datasets[item.datasetIndex].label} : ${data.datasets[item.datasetIndex].data[0].c}`;
                 },
             },
         },
