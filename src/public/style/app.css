@@ -1,1 +1,133 @@
-    
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+.menu__item {
+    text-align: right;
+}
+.menu__item label {
+    padding: 5px 10px 5px 5px;
+    display: block;
+    color: #fafafafa;
+    font-size: 1rem;
+    cursor: pointer;
+    transition-duration: .3s;
+}
+.menu__item:hover {
+    background-color: rgba(255, 255, 255, .7);
+}
+.menu__item:hover label {
+    color: #000;
+}
+.menu__item:hover .menu__dropdown {
+    height: 300px;
+}
+.menu__dropdown {
+    height: 0;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    background-color: #fafafafa;
+    transition: .3s;
+}
+.menu__dropdown .menu__dropdown__item a {
+    color: #000;
+}
+
+.datalab {
+    width: 300px;
+    height: auto;
+}
+
+.datalab img {
+    max-width: 100%;
+}
+
+nav {
+    box-shadow: none;
+    background: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 30px 0 0;
+    height: 50px;
+}
+
+.block .block__title {
+    text-align: center;
+    font-weight: 300;
+}
+
+.hero {
+    color: #fafafa;
+    padding-top: 190px;
+    background: linear-gradient(50deg, HSLA(205, 62%, 44%, 1), #52b07c);
+    padding-bottom: 25px;
+}
+
+.hero .hero__title {
+    font-size: 3rem;
+}
+
+.to-source {
+    border-radius: 40px;
+    background-color: #52b07c;
+}
+
+.container-wide {
+    padding: 0 2em;
+}
+
+.bubblechart canvas {
+    margin: 25px 0;
+}
+
+.description {
+    background-color: #FDFDFF;
+}
+
+.about {
+    background-color: #393D3F;
+    color: #fafafa;
+    padding-bottom: 20px;
+}
+
+.author {
+    text-align: center;
+    padding: 25px;
+    background-color: #EE4266;
+    color: #fff;
+    margin-top: -20px;
+}
+
+.author .author__img {
+    width: 150px;
+    box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, .3)
+}
+
+.author .author__name {
+    font-weight: 100;
+    margin-top: 15px;
+}
+
+.author .author__social-media__icon {
+    display: inline-flex;
+    margin: 0 15px;
+}
+
+.author .author__social-media__icon svg {
+    width: 50px;
+    height: 50px;
+    fill: #fff;
+    transition: .3s;
+}
+
+.author .author__social-media__icon--github:hover svg {
+    fill: #000;
+    border-radius: 50px;
+}
+.author .author__social-media__icon--linkedin:hover svg {
+    fill: #4875B4;
+    border-radius: 5px;
+}
