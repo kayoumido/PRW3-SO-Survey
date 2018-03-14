@@ -3,15 +3,164 @@
     <head>
         <meta charset="utf-8">
         <title>PRW3 - Stackoverflow bubble chart</title>
-        <link rel="stylesheet" href="src/public/lib/materialize.min.css">
-        <link rel="stylesheet" href="src/public/app.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+        <link rel="stylesheet" href="src/public/style/lib/materialize.min.css">
+        <link rel="stylesheet" href="src/public/style/app.css">
     </head>
     <body>
-        <canvas id="bubblechart" style="background-color: #ffffff;"></canvas>
+
+        <nav>
+            <div class="container-wide">
+                <div class="row">
+                    <div class="s12 m3">
+                        <a href="#" class="brand-logo datalab"><img src="src/public/img/logo-cpnv-datalab.png" alt=""></a>
+                    </div>
+                    <div class="s12 m9">
+                        <div class="right">
+                            <ul class="menu">
+                                <li class="menu__item">
+                                    <label>Dropdown</label>
+                                    <ul class="menu__dropdown">
+                                        <li class="menu__dropdown__item"><a href="#proj1">Stackoverflow 2017 survey thing</a></li>
+                                        <li class="menu__dropdown__item"><a href="#proj1">Stackoverflow 2017 survey thing</a></li>
+                                        <li class="menu__dropdown__item"><a href="#proj1">Stackoverflow 2017 survey thing</a></li>
+                                        <li class="menu__dropdown__item"><a href="#proj1">Stackoverflow 2017 survey thing</a></li>
+                                        <li class="menu__dropdown__item"><a href="#proj1">Stackoverflow 2017 survey thing</a></li>
+                                        <li class="menu__dropdown__item"><a href="#proj1">Stackoverflow 2017 survey thing</a></li>
+                                        <li class="menu__dropdown__item"><a href="#proj1">Stackoverflow 2017 survey thing</a></li>
+                                        <li class="menu__dropdown__item"><a href="#proj1">Stackoverflow 2017 survey thing</a></li>
+                                        <li class="menu__dropdown__item"><a href="#proj1">Stackoverflow 2017 survey thing</a></li>
+                                        <li class="menu__dropdown__item"><a href="#proj1">Stackoverflow 2017 survey thing</a></li>
+                                        <li class="menu__dropdown__item"><a href="#proj1">Stackoverflow 2017 survey thing</a></li>
+                                        <li class="menu__dropdown__item"><a href="#proj1">Stackoverflow 2017 survey thing</a></li>
+                                        <li class="menu__dropdown__item"><a href="#proj1">Stackoverflow 2017 survey thing</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="block hero hero--landing">
+            <div class="row valign-wrapper no-valign-wrapper-on-mobile">
+                <div class="col l5 valign hero__text">
+                    <div class="container-wide">
+                        <h1 class="hero__title">Stack Overflow 2017 Survey</h1>
+                        <p>
+                            Every year, Stack Overflow conducts a massive survey of people on the site, covering all sorts of information like programming
+                            languages, salary, code style and various other information. In 2017, they amassed more than 64,000 responses fielded from
+                            213 countries.
+                        </p>
+                        <p>
+                            This visualization was made to see the technologies people want to used based of the ones that they are currently using.
+                        </p>
+                        <a href="https://www.kaggle.com/stackoverflow/so-survey-2017" target="_blank" class="modal-trigger btn btn-large waves-effect waves-light to-source">Data Source</a>
+                    </div>
+                </div>
+                <div class="col l7 hero__text hero__text--void"></div>
+            </div>
+        </div>
+        
+        <div class="block bubblechart">
+            <div class="row">
+                <div class="col l12">
+                    <h2 class="block__title">Visualization</h2>
+                </div>
+                <div class="col l12">
+                    <canvas id="bubblechart" style="background-color: #ffffff;" height="500" width="1898"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="block description">
+ 
+            <div class="container">
+                <div class="row">
+                    <div class="col l12">
+                        <h2 class="block__title">Description</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l6 description__block">
+                        <h3 class="description__block__title">How to use</h3>
+                        <p>
+                            The bubble chart shows the different technologies that are used by developpers arround the world. 
+                            The bigger the circle the more people use it. 
+                            When a bubble is hovered, you can see the name of the technology and the number of developpers using it.
+                            And when you click one, it will show a new chart with the technologies that people want to use.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l6 description__block description__block--void"></div>
+                    <div class="col l6 description__block">
+                        <h3 class="description__block__title">Technologies used</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="block about">
+            <div class="container">
+                <div class="row">
+                    <div class="col l12">
+                        <h2 class="block__title">About</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l12">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block author">
+            <div class="row">
+                <div class="col l12">
+                    <h2 class="block__title">Author</h2>
+                </div>
+                <div class="col l12">
+                    <img src="https://avatars3.githubusercontent.com/u/10879378?s=460&v=4" alt="profil picture" class="circle responsive-img author__img">
+                    <h3 class="author__name">Doran Kayoumi</h3>
+                    <ul class="author__social-media">
+                        <li class="author__social-media__icon author__social-media__icon--github">
+                            <a href="https://github.com/kayoumido" target="_blank">
+                                <svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="src/public/img/icons.svg#github"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="author__social-media__icon author__social-media__icon--linkedin">
+                            <a href="https://www.linkedin.com/in/dorankayoumi/" target="_blank">
+                                <svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="src/public/img/icons.svg#linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
 
         <script src="src/public/js/lib/Chart.js"></script>
-        <script src="src/public/js/lib/materialize.min.js"></script>
         <script src="src/public/js/lib/jquery-3.3.1.min.js"></script>
+        <script src="src/public/js/lib/materialize.min.js"></script>
         <script src="src/public/js/app.js" type="module"></script>
     </body>
 </html>
