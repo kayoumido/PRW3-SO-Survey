@@ -36,7 +36,21 @@ nav._header {
 .bubblechart canvas {
     margin: 25px 0;
 }
-
+.bubblechart__technologie__list {
+    overflow-x: scroll;
+    max-height: 420px;
+}
+.bubblechart__technologie__list .bubblechart__technologie {
+    cursor: pointer;
+}
+.bubblechart__technologie__list--children .bubblechart__technologie {
+    cursor: default;
+}
+.bubblechart__technologie__list .bubblechart__technologie__pastel {
+    border-radius: 22.5px;
+    width: 22.5px !important;
+    height: 22.5px;
+}
 .description {
     background-color: #FDFDFF;
 }
