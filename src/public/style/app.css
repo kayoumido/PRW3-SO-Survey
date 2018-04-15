@@ -32,7 +32,16 @@ nav._header {
 .container-wide {
     padding: 0 2em;
 }
-
+.bubblechart {
+    position: relative;
+}
+.bubblechart__back__button {
+    cursor: pointer;
+    position: absolute;
+    right: 23%;
+    top: 75px;
+    display: none;
+}
 .bubblechart canvas {
     margin: 25px 0;
 }

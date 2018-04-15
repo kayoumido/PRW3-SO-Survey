@@ -18,7 +18,7 @@ $.ajax({
 }).done(d => {
     // copy config
     let parentChartConfig = defaultconfig;
-    
+
     // convert object of objects into array of objects
     let data = [];
     for (var tech in d) {
@@ -32,7 +32,7 @@ $.ajax({
     });
 
     parentChartConfig.options.onClick = (e, element) => {
-        
+
         // check if a bubble was clicked
         if (element[0]) {
             // check if there is a child chart
@@ -58,4 +58,11 @@ $.ajax({
 
     charts.chart = createChart(data, parentChartConfig, 300);
     listClickEvent(charts, data);
+
+    $(".bubblechart__back__button").click(function() {
+        $(this).hide();
+        charts.childChart.destroy();
+        charts.chart = createChart(data, parentChartConfig, 300);
+        listClickEvent(charts, data);
+    });
 });
