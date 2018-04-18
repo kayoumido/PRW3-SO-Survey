@@ -1,6 +1,7 @@
 import { defaultconfig } from "./helper/defaultBubbleChartConfig.js";
 import { createChart } from "./helper/createChart.js";
 import { listClickEvent } from "./helper/listClickEvent.js";
+import { logger } from "./helper/logger.js";
 
 var chart;
 var childChart;
@@ -40,6 +41,9 @@ $.ajax({
                 // no, create it
                 let clickedBubble = Object.keys(data)[element[0]._datasetIndex];
                 let wantedTechs = data[clickedBubble]["Wanted Technologies"];
+
+                logger(data[element[0]._datasetIndex].key);
+
                 charts.chart.destroy();
                 charts.childChart = createChart(wantedTechs, defaultconfig, 50);
                 listClickEvent(charts, data);

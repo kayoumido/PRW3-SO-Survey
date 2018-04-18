@@ -1,5 +1,6 @@
 import { defaultconfig } from "./defaultBubbleChartConfig.js";
 import { createChart } from "./createChart.js";
+import { logger } from "./logger.js"
 
 export function listClickEvent(charts, data) {
 
@@ -12,6 +13,8 @@ export function listClickEvent(charts, data) {
             let wantedTechs = data[clickedtech]["Wanted Technologies"];
             charts.chart.destroy();
             charts.childChart = createChart(wantedTechs, defaultconfig, 50);
+
+            logger(data[clickedtech].key);
         }
     });
 }
