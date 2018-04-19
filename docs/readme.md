@@ -4,7 +4,7 @@
 
 Before submitting any work, please take some time to read the following.
 
-* [Code of Conduct](../.github/CODE_OF_CONDZCT.md)
+* [Code of Conduct](../.github/CODE_OF_CONDUCT.md)
 * [Issue Reporting](#issue-reporting)
 * [Pull Request](#pull-request)
 * [Development Setup](#development-setup)
@@ -14,7 +14,7 @@ Before submitting any work, please take some time to read the following.
 
 ## Issue Reporting
 
-Nothing special to do. You can simply use [github issues](https://github.com/kayoumido/PRW3-SO-Survey).
+Nothing special to do. You can simply use [github issues](https://github.com/kayoumido/PRW3-SO-Survey/issues).
 
 
 
