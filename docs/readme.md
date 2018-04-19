@@ -47,7 +47,7 @@ You can now, run and work on the project:
 $ vagrant up
 ```
 
-Your app is accessible under [192.168.10.12](192.168.10.1) or you can add the following to your **hosts** file and access it under [so.datalab.io](http://so.datalab.io/).
+Your app is accessible under [192.168.10.12](192.168.10.12) or you can add the following to your **hosts** file and access it under [so.datalab.io](http://so.datalab.io/). 
 
 ```
 192.168.10.12 so.datalab.io
