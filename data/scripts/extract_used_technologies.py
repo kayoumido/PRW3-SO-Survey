@@ -21,7 +21,7 @@ def extract_used_technologies():
     df = pd.read_csv('data/raw/survey_results_public.csv')
     # opening/creating output file
     output = open('data/processed/extracted_used_technologies.csv', 'w+')
-    output.write('Technologie,Count\n')
+    output.write('Technology,Count\n')
 
     technologies = {}
 

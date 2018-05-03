@@ -3,12 +3,164 @@
     <head>
         <meta charset="utf-8">
         <title>PRW3 - Stackoverflow bubble chart</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+        <link rel="stylesheet" href="src/public/style/lib/materialize.min.css">
+        <link rel="stylesheet" href="src/public/style/app.css">
     </head>
     <body>
-        <canvas id="bubblechart" style="background-color: #ffffff;"></canvas>
+        <div class="block hero hero--landing">
+            <div class="row valign-wrapper no-valign-wrapper-on-mobile">
+                <div class="col l5 valign hero__text">
+                    <div class="container-wide">
+                        <h1 class="hero__title">Stack Overflow 2017 Survey</h1>
+                        <p>
+                            Every year, Stack Overflow conducts a massive survey of people on the site, covering all sorts of information like programming
+                            languages, salary, code style and various other information. In 2017, they amassed more than 64,000 responses fielded from
+                            213 countries.
+                        </p>
+                        <p>
+                            This visualization was made to see the technologies people want to used based of the ones that they are currently using.
+                        </p>
+                        <a href="https://www.kaggle.com/stackoverflow/so-survey-2017" target="_blank" class="modal-trigger btn btn-large waves-effect waves-light to-source">Data Source</a>
+                    </div>
+                </div>
+                <div class="col l7 hero__text hero__text--void"></div>
+            </div>
+        </div>
 
+        <div class="block description">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col l12">
+                        <h2 class="block__title">Description</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l12 description__block">
+                        <h3 class="description__block__title">It's purpose</h3>
+                        <p>
+                            The chart aims to show the technologies that are used by developers around the world and
+                            the technologies they want to use based on the ones they are currently using.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col l12 description__block">
+                        <h3 class="description__block__title">How to use</h3>
+                        <p>
+                            The chart contains a bubble for every technology used by developers. The size of the bubble depends
+                            on the number of developers using that specific technology, the more it's used the bigger the bubble.
+                            When you hover on a bubble the name of the technology appears with the number of people using it.
+                            If you click on one of them, the content of the chart will change and it will contain bubbles of the
+                            technologies that developers want to use based on the technology that was clicked.
+                         </p>
+                         <p>
+                             The list on the right of the chart contains all the technologies that are currently present in the graph with
+                             the number of people using a certain technology.
+                             If you click on one of them, the content of the chart will change and it will contain bubbles of the
+                             technologies that developers want to use based on the technology that was clicked.
+                         </p>
+                         <p>
+                             Once you've clicked on a bubble (or an item in the list), you can click anywhere in the white area
+                             of the chart to return to the main one.
+                         </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col l6 description__block">
+                        <h3 class="description__block__title">Technologies used</h3>
+                        <p>
+                            The project was created using <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">HTML</a>, <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" target="_blank">CSS</a> and <a href="https://en.wikipedia.org/wiki/JavaScript" target="_blank">Javascript</a>.
+                        </p>
+                        <p>
+                            The <a href="https://en.wikipedia.org/wiki/Comma-separated_values" target="_blank">CSV</a> data is tidied/parsed via an external <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" target="_blank">Python</a> script and then served using <a href="https://en.wikipedia.org/wiki/PHP" target="_blank">PHP</a> script.
+                        </p>
+                        <p>
+                            The chart is created with <a href="https://www.chartjs.org/" target="_blank">Chart.js</a>.
+                        </p>
+                        <p>
+                            <a href="http://next.materializecss.com/" target="_blank">Materialize</a> and <a href="https://jquery.com/" target="_blank">jQuery</a> were used to simplify the design and interaction with the elements.
+                        </p>
+                    </div>
+                    <div class="col l6 description__block description__block--onlyimage">
+                        <img src="./src/public/img/usedtechs.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block bubblechart">
+            <div class="row">
+                <div class="col l12">
+                    <h2 class="block__title">Visualization</h2>
+                    <a class="bubblechart__back__button">Back</a>
+                </div>
+                <div class="col l9">
+                    <canvas id="bubblechart" style="background-color: #ffffff;" height="500" width="1898"></canvas>
+                </div>
+                <div class="bubblechart__technologie__list col l3"></div>
+            </div>
+        </div>
+
+        <div class="block about">
+            <div class="container">
+                <div class="row">
+                    <div class="col l12">
+                        <h2 class="block__title">About</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l12">
+                        <p>
+                            This project was carried out as part of the web programming course of the
+                            ES Technician training in IT at the Centre Professionnel du Nord Vaudois.
+                        </p>
+                        <p>
+                            The main objective was to create one or multiple charts requiring a certain amount
+                            of user interaction. The data used for creating the charts had to be "Open Data" And
+                            they had to have some sort of relation with Switzerland or Computer Science.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block author">
+            <div class="row">
+                <div class="col l12">
+                    <h2 class="block__title">Author</h2>
+                </div>
+                <div class="col l12">
+                    <img src="https://avatars3.githubusercontent.com/u/10879378?s=460&v=4" alt="profil picture" class="circle responsive-img author__img">
+                    <h3 class="author__name">Doran Kayoumi</h3>
+                    <ul class="author__social-media">
+                        <li class="author__social-media__icon author__social-media__icon--github">
+                            <a href="https://github.com/kayoumido" target="_blank">
+                                <svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="src/public/img/icons.svg#github"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="author__social-media__icon author__social-media__icon--linkedin">
+                            <a href="https://www.linkedin.com/in/dorankayoumi/" target="_blank">
+                                <svg>
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="src/public/img/icons.svg#linkedin"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="../../navGenerator.js"></script>
         <script src="src/public/js/lib/Chart.js"></script>
         <script src="src/public/js/lib/jquery-3.3.1.min.js"></script>
+        <script src="src/public/js/lib/materialize.min.js"></script>
         <script src="src/public/js/app.js" type="module"></script>
     </body>
 </html>

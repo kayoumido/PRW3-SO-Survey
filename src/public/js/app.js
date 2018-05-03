@@ -1,8 +1,15 @@
 import { defaultconfig } from "./helper/defaultBubbleChartConfig.js";
 import { createChart } from "./helper/createChart.js";
+import { listClickEvent } from "./helper/listClickEvent.js";
+import { logger } from "./helper/logger.js";
 
 var chart;
 var childChart;
+
+var charts = {
+    chart: null,
+    childChart: null
+}
 
 $.ajax({
     url: "src/server/app.php",
@@ -12,7 +19,7 @@ $.ajax({
 }).done(d => {
     // copy config
     let parentChartConfig = defaultconfig;
-    
+
     // convert object of objects into array of objects
     let data = [];
     for (var tech in d) {
@@ -26,27 +33,40 @@ $.ajax({
     });
 
     parentChartConfig.options.onClick = (e, element) => {
-        
+
         // check if a bubble was clicked
         if (element[0]) {
             // check if there is a child chart
-            if (childChart == null || childChart.canvas == null) {
+            if (charts.childChart == null || charts.childChart.canvas == null) {
                 // no, create it
                 let clickedBubble = Object.keys(data)[element[0]._datasetIndex];
                 let wantedTechs = data[clickedBubble]["Wanted Technologies"];
-                chart.destroy();
-                childChart = createChart(wantedTechs, defaultconfig, 50);
+
+                logger(data[element[0]._datasetIndex].key);
+
+                charts.chart.destroy();
+                charts.childChart = createChart(wantedTechs, defaultconfig, 50);
+                listClickEvent(charts, data);
             }
         }
         else {
             // check if there is a parent chart
-            if (chart.canvas === null) {
+            if (charts.chart.canvas === null) {
                 // no, destroy child chart and create a new parent
-                childChart.destroy();
-                chart = createChart(data, parentChartConfig, 300);
+                charts.childChart.destroy();
+                charts.chart = createChart(data, parentChartConfig, 300);
+                listClickEvent(charts, data);
             }
         }
     };
 
-    chart = createChart(data, parentChartConfig, 300)
+    charts.chart = createChart(data, parentChartConfig, 300);
+    listClickEvent(charts, data);
+
+    $(".bubblechart__back__button").click(function() {
+        $(this).hide();
+        charts.childChart.destroy();
+        charts.chart = createChart(data, parentChartConfig, 300);
+        listClickEvent(charts, data);
+    });
 });
